@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Confirmar Remoção</title>
+</head>
+<body>
+    <h1>Tem certeza que deseja remover a nota: "{{ nota.titulo }}"?</h1>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Sim, remover</button>
+    </form>
+    <a href="{% url 'lista_notas' %}">Cancelar</a>
+</body>
+</html>

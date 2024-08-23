@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Adicionar/Atualizar Nota</title>
+</head>
+<body>
+    <h1>{{ nota.id|default:"Nova" }} Nota</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Salvar</button>
+    </form>
+    <a href="{% url 'lista_notas' %}">Voltar</a>
+</body>
+</html>
